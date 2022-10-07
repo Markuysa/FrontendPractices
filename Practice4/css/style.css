@@ -1,0 +1,290 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+
+
+body{
+	height: 100%;
+	/* background: url(/img/5411030.jpg) no-repeat center center fixed; */
+	background-size: cover ;
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+}
+/*---------------------------------- Main Image menu -----------------------------------*/
+.content_main_subtitle{
+	margin-left: 45px;
+	text-decoration: overline;
+	margin-top: 4px;
+	font-size: 24px;
+	margin-bottom:100px;
+	margin-right: 40px;
+}
+.content_main_title{
+	font-size: 64px;
+	margin-right: 40px;
+
+}
+.content_main_menu{
+
+	text-shadow:
+	0 0 7px #fff,
+	/* 0 0 10px #fff, */
+	/* 0 0 21px #fff,
+	0 0 42px orange, */
+	0 0 82px orange,
+	0 0 92px orange,
+	0 0 102px orange,
+	0 0 151px orange;
+	
+}
+
+.wrapper{
+	
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.image_block{
+	min-height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url(/img/zakat_nebo_oblaka_121865_1920x1080.jpg) no-repeat center center fixed;
+	
+	
+	background-position: 0;
+	
+	background-size: cover;
+	display: flex;
+	/* opacity: 0.5; */
+
+
+}
+
+.main_menu_header h1,h3{
+	
+	z-index: 100;
+	color:white;
+	
+}
+.image_block_text_content{
+	flex: 1 1 auto;
+	max-width: 1000px;
+	margin: 0px auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+
+}
+.content_main_title{
+
+	margin-left: 50px;
+	margin-top: 50px;
+	font-size: 50px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+/*---------------------------------- Employee list -----------------------------------*/
+.content_employee_admin , .content_employee_docs{
+	
+	margin-left: 10px;
+}
+.content_employee_header{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.content_text_terms_list{
+
+	margin-left: 10px;
+
+}
+.EmployeeImage{
+	border: 2px solid black;
+	max-width: 200px;
+	margin: 10px
+}
+.content_text_employee{
+
+
+}
+/*---------------------------------- NavBar -----------------------------------*/
+.content_nav_bar{
+	background-color:black;
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index:10;
+}
+.nav_icon{
+	width : 20px;
+}
+.nav_bar_item{
+	
+	font-size: 18px;
+	margin: 0px 0px 0px 21px;
+	color: aliceblue;
+}
+
+
+.content_nav_bar_list{
+	display: flex;
+	justify-self: center;
+	margin: 10px;
+	
+}
+a:active{
+	color: yellow;
+
+}
+.logo{
+	max-height: 20px;
+	max-width: 20px;
+}
+.logo:hover{
+	
+	max-height: 40px;
+	max-width: 40px;
+}
+/*---------------------------------- Why us block -----------------------------------*/
+.content_text{
+	width: auto;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+.why_us_title{
+
+	position: absolute;
+	margin-bottom: 330px;
+	font-size: 50px;
+}
+
+.content_why_us{
+
+	width: 1150px;
+	min-height: 500px;
+	display: flex;
+	align-items: center;
+	background-color:aliceblue;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.item_img{
+	width: 150px;
+	height: 150px;
+	
+}
+.item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 24px;
+	
+}
+
+/*---------------------------------- Footer -----------------------------------*/
+
+.class_footer{
+	background-color: black;
+	display: flex;
+	color:white;
+	font-size:16px;
+	padding-top: 10px;
+	align-items: center;
+	justify-content: center	;
+}
+.tel{
+
+	font-size: 18px;
+	color:aliceblue;
+	display: flex;
+	align-items:flex-end;
+}
+.phone_number:visited{
+	color:red;
+
+} 
+
+
+.aside_block{
+	float: right;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-items:flex-end;
+	background-color: aliceblue;
+	border: 5px solid black;
+	border-radius: 10px;
+	box-shadow: 10px 10px black;
+	margin-right:10px;
+	position: sticky;
+	top: 0;
+}
+
+.item_image{
+	height: 200px;
+	width: 300px;
+	margin: 0 auto;
+	display: block;
+	margin-top:10px;
+
+}
+
+
+/*---------------------------------- List -----------------------------------*/
+
+.content_program_text_content li{
+
+	margin-left: 20px;
+	margin-top: 5px;
+	
+	
+}
+
+.achievment_item{
+	/* background:url(/img/star.png) no-repeat ; */
+	width: 10px;
+	height: 10px;
+}

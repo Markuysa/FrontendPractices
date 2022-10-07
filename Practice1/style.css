@@ -1,0 +1,42 @@
+
+
+.EmployeeImage{
+	border: 2px solid black;
+	max-width: 200px;
+	margin: 10px
+	
+}
+.nevermindImg{
+	inline-size: auto;
+	
+	border-radius: 10px;
+}
+li{
+	margin-left: 20px;
+
+}
+.content_main_title{
+
+	margin-left: 50px;
+	margin-top: 50px;
+	font-size: 36px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	
+}
+span{
+	/* background: url("/img/icon.png"); */
+	
+}
+
+.content_employee_admin , .content_employee_docs{
+	margin-left: 10px;
+}
+.content_employee_header{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.content_text_terms_list{
+
+	margin-left: 10px;
+
+}
