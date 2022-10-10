@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/lg_styles.css">
+    <link rel="icon" type="image/png" href="/img/login_page/lotus.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header_content">
+    <header class="content_header">
+            <div>
+                <div>
+                    <nav class="login_navbar">
+                        <ul class = "content_nav_bar_list" >
+                            <img class = "logo" src="/img/login_page/meditation_logo2.png" alt="">
+                            <a href="http://127.0.0.1:5500/html/login_page.html" class="sign_in_header"><b>Sign in</b></a>
+                            <img src="/img/icons/icons8-шеврон-вправо-30.png" class="shevron" alt="">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    </div>
+    <div class="wrapper">
+        <b><p>Create a new account</p></b>
+        <div class="form">
+            
+            <div class="form_context">
+                <form action="POST" autocomplete="on" class="mainForm">
+                    <legend><b>Input your personal data</b></legend>
+                    <fieldset class="form_presonal_information">
+                        <input
+                        class="input_field_item" 
+                        type="text" 
+                        placeholder="Login" 
+                        name="login">
+                        <br>
+                        <input
+                        class="input_field_item" 
+                        type="text" 
+                        placeholder="Name" 
+                        name="name">
+                        <br>
+                        <input required 
+                        class="input_field_item" 
+                        type="email" 
+                        placeholder="Email" 
+                        name="email">
+                        <br>
+                        <input class="input_field_item" 
+                        required
+                        type="password" 
+                        name="password" 
+                        placeholder="Password">
+                        <br>
+                    </fieldset>
+                    <fieldset class="birth_information">
+                        <div class="datetime_fields">
+                            <input
+                            min=""
+                            class="input_field_item" 
+                            type="date" 
+                            placeholder="Day of bitrth" 
+                            name="dayOfBirth">
+                            <input
+                            class="input_field_item" 
+                            type="time" 
+                            placeholder="Bitrth time" 
+                            name="birthTime">
+                        </div>
+                        <br>
+                    </fieldset>
+                    <br>
+                    <!-- <legend><b>Tell us somethig more</b></legend>-->
+                    <fieldset class="form_additional_information">
+                        <label for="agreement_checkbox">
+                            <input type="checkbox" name="agreement_checkbox">
+                            I agree with the policy of WISH.corp
+                        <label>
+                            <br>
+                            <label for="agreement_checkbox_message">
+                                <input type="checkbox" name="agreement_checkbox_message">
+                                Send me newest info abt meditations
+                            <label>
+                    </fieldset>
+                    <button class="login_button">
+                        Create
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
