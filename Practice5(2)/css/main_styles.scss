@@ -41,7 +41,6 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     .logotype_image{
-        margin-left:130px;
         width: 80px;
     }
 
@@ -56,7 +55,6 @@ body::-webkit-scrollbar {
         font-family: "Larsseit";
         display: none;
     }
-    
     .menu_nav_button:hover{
         display: inline-block;
         background-color: rgb(116, 188, 230);
@@ -72,9 +70,6 @@ body::-webkit-scrollbar {
                 padding: 10px 20px 10px;
                 border-radius: 25px;
                 
-            }
-            a{
-
             }
             display: flex;
 
@@ -138,7 +133,6 @@ body::-webkit-scrollbar {
         justify-content:space-between;
         .scroll_box{
         img{
-
             margin-left:100px;
             margin-top:100px;
         }
@@ -174,10 +168,7 @@ body::-webkit-scrollbar {
                 visibility: visible;
             }
         }
-        
-
     }
-
 }
 @media screen and (max-width:450px){
     .content_main_page_title{
@@ -188,11 +179,6 @@ body::-webkit-scrollbar {
         font-size: 74px;
        }
     }
-    .header_content{
-        button{
-            visibility: visible;
-        }
-    }
 }
 @media screen and (max-width:380px){
     .content_main_page_title{
@@ -202,10 +188,5 @@ body::-webkit-scrollbar {
        h1{
         font-size: 64px;
        }
-    }
-    .header_content{
-        button{
-            visibility: visible;
-        }
     }
 }
