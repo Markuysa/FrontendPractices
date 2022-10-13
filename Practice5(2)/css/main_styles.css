@@ -164,6 +164,7 @@ body::-webkit-scrollbar {
   background-color: aqua;
   opacity: 0.7;
   color: #011627;
+  transition: 0.5s;
 }
 
 .content_main_page {

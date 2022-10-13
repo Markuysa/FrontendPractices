@@ -1,0 +1,160 @@
+@import url("/css/resetFile.css");
+
+
+.main_content{
+    height: 100vh;
+    background: url("/img/backgrounds/23379da6fabb46cf3d1b7b52277d2d54.jpeg")  no-repeat center center fixed;
+    overflow: hidden;
+    background-size: cover;
+    .comments_content{
+        width: 100%;
+        bottom: 0;
+        height: fit-content;
+        background-color: red;
+        position: absolute;
+    }
+    .watch_more{
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;   
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        .item{
+            margin-left:10px;
+        }
+        img{
+            border-radius: 8px;
+            position: relative;
+            top: 0;                
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+        }
+        
+    }
+    .title_block{
+        display: flex;
+        flex-direction: row;
+        .meditation_image{
+            max-width: 350px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            img{
+                border-radius: 8px;
+                position: relative;
+                top: 0;                
+                max-width: 100%;
+                max-height: 100%;
+                margin: auto;
+            }
+        }
+        .description{
+            position: absolute;
+            top: 100px;
+            left: 30%;
+            margin-right: 40px;
+            color:white;
+        }
+
+    }    
+    // Styles for the animation of shooting stars
+    .sky{
+        height: 50%;
+        width: 100%;
+        transform: rotateZ(15deg);
+        .star{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.5px;
+            background: linear-gradient(-45deg,#5f91ff,rgba(0,0,255,0));
+            filter: drop-shadow(0 0 6px #699bff);
+            animation: tail 1.2s ease-in-out infinite, shooting 1.2s ease-in-out infinite;
+        }
+        .star::before,
+        .star::after{
+            position:absolute;
+            content: "";
+            top:calc(50% - 1px);
+            right: 0;
+            height: 1px;
+            background: linear-gradient(-45deg,rgba(0,0,255,0),#5f91ff,rgba(0,0,255,0));
+            transform: translateX(50%) rotateZ(45deg);
+            animation: shining 2s ease-in-out infinite;
+
+        }
+        
+        .star:after{
+            transform: translateX(50%) rotateZ(-45deg);
+        }
+        .star:nth-child(1){
+            left:600px;
+            top:0;
+            animation-delay: 50ms ;
+        }
+        .star:nth-child(1)::before,
+        .star:nth-child(1)::after{
+            animation-delay: 1150ms;
+        }
+
+
+        .star:nth-child(2){
+            top:calc(100% - 500px);
+            top:calc(50% - -150px);
+            animation-delay: 650ms ;
+        }
+        .star:nth-child(2)::before,
+        .star:nth-child(2)::after{
+            animation-delay: 50ms;
+        }
+
+
+        .star:nth-child(3){
+            top:calc(100% - 0px);
+            top:calc(50% - 0px);
+            left: 100px;
+            animation-delay: 925ms ;
+        }
+        .star:nth-child(3)::before,
+        .star:nth-child(3)::after{
+            animation-delay: 925ms;
+        }
+    } 
+    //
+}
+@keyframes tail {
+    0%{
+        width: 0;
+    }
+    30%{
+        width: 100px;
+    }
+    100%{
+        width: 0;
+    }
+    
+}
+@keyframes shining {
+    0%{
+        width: 0;
+    }
+    30%{
+        width: 30px;
+    }
+    100%{
+        width: 0;
+    }
+    
+}
+@keyframes shooting {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1000px);
+    }
+    
+}
+

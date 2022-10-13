@@ -162,7 +162,6 @@ body::-webkit-scrollbar {
                 
             }
             display: flex;
-            
             justify-content:space-evenly;
             color:white;
             font-size: 18px;
@@ -170,7 +169,8 @@ body::-webkit-scrollbar {
             li:hover{
                 background-color: aqua;
                 opacity: 0.7;
-                color:#011627
+                color:#011627;
+                transition: 0.5s;
             }
         }
     }
