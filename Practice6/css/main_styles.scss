@@ -1,0 +1,286 @@
+@import url("/css/resetFile.css");
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Noe Display"; 
+    // адрес шрифта и тип 
+    src: url("/fonts/FontsFree-Net-NoeDisplay-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Larsseit"; 
+    // адрес шрифта и тип 
+    src: url("/fonts/LarsseitThin.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+body::-webkit-scrollbar {
+    display: none;
+
+  }
+
+
+// Main image page styles
+*{
+    box-sizing: border-box;
+}
+.content_main_page{
+    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+    
+}
+#check-menu{
+    display: none;
+}
+.header_content{
+    position: relative;
+    min-height: 227;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+    .logotype_image{
+        margin-left:20px;
+        width: 80px;
+    }
+    .burger_menu{
+        //background-color: red;
+        nav{
+            //display: none;
+            a{
+                display: block;
+                width: 100px;
+                margin-top:3px;
+                border-radius: 48px;
+                margin-right:20px;
+                color:white;
+                padding: 10px 20px 10px;
+                border-radius: 25px;
+                font-family: Larsseit;
+            }
+            a:hover{
+                background-color: #00C9E0;
+                transform: translate(10%);
+                transition: 0.5s;
+            }
+        }
+        .burger_button{
+            width: 38px;
+            height: 38px;
+            visibility: collapse;
+            label{
+                position: absolute;
+                margin-top:10px;    
+                opacity: 0;
+                z-index:100;
+                cursor: pointer;
+            }
+            .hidden_ul{
+                transform: translateY(40px);
+                transform: translateX(-60%);
+                max-height: 0;
+                overflow: hidden;
+            }
+            cursor: pointer;
+            z-index: 100;
+            position:relative;
+            .burger_line{
+                position:absolute;
+                width: 35px;
+                height: 2px;
+                background-color: #fff;
+            }
+            .smth{
+                
+                margin-top:5px;
+            }
+            .third{
+                margin-top:15px;
+            }
+            .second{
+                margin-top:15px;
+            }
+            .fourth{
+                margin-top:25px;
+            }
+        }
+        #check-menu:checked ~ .smth{
+            display: none;
+        }
+        #check-menu:checked ~ .second{
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        #check-menu:checked ~ .third{
+            transform: rotate(-45deg);
+            transition: 0.5s;
+        }
+        #check-menu:checked ~ .hidden_ul{
+            max-height: 500px;
+            width: 200px;
+            transition: 3s;
+        }
+}
+    
+    #check-menu:checked ~  .fourth{
+        display: none;
+    }
+    .menu_nav_button{
+        background-color:#00C9E0;
+        margin-right:130px;
+        width: 123px;
+        height: 40px;
+        border-radius: 48px;
+        color: white;
+        font-size:13px;
+        font-family: "Larsseit";
+        display: none;
+    }
+    .menu_nav_button:hover{
+        display: inline-block;
+        background-color: rgb(116, 188, 230);
+        border:2px solid white ;
+        color:black;
+    }
+    .options_list_navbar{
+        width: fit-content;
+        .main_ul{
+            li{
+                display: inline-block;
+                margin-right:20px;
+                color:white;
+                padding: 10px 20px 10px;
+                border-radius: 25px;
+                
+            }
+            display: flex;
+            justify-content:space-evenly;
+            color:white;
+            font-size: 18px;
+            font-family: Larsseit;  
+            li:hover{
+                background-color: aqua;
+                opacity: 0.7;
+                color:#011627;
+                transition: 0.5s;
+            }
+        }
+    }
+
+
+.content_main_page{
+    background:url("/img/ganapathy-kumar-GLmhbqbn1WA-unsplash\ 1.png") no-repeat center center fixed;
+    min-height: 100vh;
+	background-position: 0;
+	background-size: cover;
+    overflow: hidden;
+    .content_main_page_title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .main_title{
+            margin-top:150px;
+            color: white;
+            font-family: 'Noe Display';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 153px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Larsseit';
+            font-style: bold;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color:white;
+        }
+
+    }
+    .shadow_box{
+        background: linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%);
+        position: absolute;
+        width: 100%;
+        height: 377px;
+        bottom: 0;
+        display: flex;
+        justify-content:space-between;
+        .scroll_box{
+        img{
+            margin-left:100px;
+            margin-top:100px;
+        }
+
+        }
+        
+        // .icons_shadow_box{
+        //     margin: 0 auto;
+        //     display: flex;
+        //     justify-content: space-evenly;
+        //     flex-direction: column;
+        //     margin-left: 100px;
+        //     img{
+        //         width: 30px;
+        //     }
+        // }
+
+    }
+}
+@media screen and (max-width:758px){
+    .content_main_page_title{
+       h1{
+        font-size: 84px;
+       }
+    }
+    .header_content{
+        .options_list_navbar{
+            
+            width: 38px;
+            height: 38px;
+            .main_ul{
+                visibility: collapse;
+            }
+            .burger_button{
+                visibility: visible;
+                
+            }
+            .burger_menu{
+                width: fit-content;
+            }
+        }
+    }
+}
+@media screen and (max-width:450px){
+    .content_main_page_title{
+        h2{
+            font-size: 20px;
+        }
+       h1{
+        font-size: 74px;
+       }
+    }
+}
+@media screen and (max-width:380px){
+    .content_main_page_title{
+        h2{
+            font-size: 15px;
+        }
+       h1{
+        font-size: 64px;
+       }
+    }
+}

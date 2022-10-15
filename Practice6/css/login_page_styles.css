@@ -1,0 +1,78 @@
+@import url("/css/resetFile.css");
+* {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  height: 100vh;
+  background-color: darkblue;
+  background-size: cover;
+}
+.wrapper .form {
+  box-shadow: 2px 2px grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  background-color: white;
+  min-width: 500px;
+  min-height: 400px;
+  border-radius: 8px;
+}
+.wrapper .form h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.wrapper .form p {
+  font-size: 16px;
+}
+.wrapper .form input {
+  background-color: rgb(229, 233, 233);
+}
+.wrapper .form input:focus {
+  border-bottom: 1px solid #00C9E0;
+}
+.wrapper .form .form_buttons {
+  width: 50%;
+  color: white;
+  font-size: 18px;
+  background-color: #00C9E0;
+  border-radius: 8px;
+}
+.wrapper .form .partners {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper .form .partners button {
+  margin-left: 10px;
+  min-width: 150px;
+  border-radius: 8px;
+}
+.wrapper .form .main_logo {
+  max-width: 100px;
+}
+.wrapper .form .main_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.wrapper .form .main_form button {
+  padding: 5px;
+}
+.wrapper .form .main_form button:hover {
+  background-color: rgb(39, 108, 148);
+}
+.wrapper .form .main_form input {
+  padding: 10px;
+}/*# sourceMappingURL=login_page_styles.css.map */

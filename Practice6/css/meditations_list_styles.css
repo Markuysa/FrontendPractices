@@ -1,0 +1,134 @@
+@import url("/css/resetFile.css");
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("/img/bgrnd.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.wrapper .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.001)), url("/img/bgrnd.png") no-repeat center center absolute;
+  width: 100%;
+  height: 100px;
+}
+.wrapper .header img {
+  width: 100px;
+}
+.wrapper h2 {
+  position: absolute;
+  color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.wrapper .content_meditations_list .products .product {
+  z-index: 0;
+  border-radius: 8px;
+  display: block;
+  border: px solid black;
+  height: 400px;
+  background-color: rgba(147, 144, 144, 0.325);
+  margin: 10px 20px 20px 20px;
+  position: relative;
+}
+.wrapper .content_meditations_list .products .product .meditation_title h2 {
+  position: absolute;
+  top: 0;
+  color: white;
+}
+.wrapper .content_meditations_list .products .product h1 {
+  font-size: 36px;
+  color: white;
+}
+.wrapper .content_meditations_list .products .product .product_buttons {
+  border: medium none;
+  background-image: none;
+  background: transparent;
+  float: left;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  margin: 3px 0 0 3px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: index 10;
+}
+.wrapper .content_meditations_list .products .product .add_to_fav_button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: medium none;
+  background-image: none;
+  background: transparent;
+  float: left;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  margin: 10px;
+  z-index: 1000;
+}
+.wrapper .content_meditations_list .products .product .add_to_fav_button img {
+  width: 20px;
+}
+.wrapper .content_meditations_list .products .product .add_to_fav_button:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s;
+}
+.wrapper .content_meditations_list .products .product video {
+  display: block;
+  padding: 2px;
+}
+.wrapper .content_meditations_list .products .product .meditation_description {
+  line-height: 1.1em;
+  color: white;
+  overflow: hidden;
+  position: absolute;
+  padding: 10px;
+  bottom: 20px;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+.wrapper .content_meditations_list .products .product:hover img {
+  transform: scale(1.05);
+}
+.wrapper .content_meditations_list .products .product-wrapper {
+  display: block;
+  float: left;
+  transition: width 0.2s;
+}
+.wrapper .content_meditations_list .products .product-wrapper .meditation_image {
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+.wrapper .content_meditations_list .products .product-wrapper .meditation_image img {
+  border-radius: 8px;
+  position: relative;
+  top: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  transition: transform 0.4s;
+}
+
+@media only screen and (min-width: 450px) {
+  .product-wrapper {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .product-wrapper {
+    width: 33.333%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .product-wrapper {
+    width: 25%;
+  }
+}/*# sourceMappingURL=meditations_list_styles.css.map */
