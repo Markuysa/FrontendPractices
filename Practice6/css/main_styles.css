@@ -155,10 +155,11 @@ body::-webkit-scrollbar {
 }
 .options_list_navbar .main_ul li {
   display: inline-block;
-  margin-right: 20px;
   color: white;
   padding: 10px 20px 10px;
   border-radius: 25px;
+  width: 150px;
+  text-align: center;
 }
 .options_list_navbar .main_ul li:hover {
   background-color: aqua;

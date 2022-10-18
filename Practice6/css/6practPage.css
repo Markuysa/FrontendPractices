@@ -1,0 +1,396 @@
+@import url("/css/resetFile.css");
+body {
+  background-color: aqua;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  position: relative;
+  overflow-x: hidden;
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.buttons .button1 {
+  background-color: rgb(162, 3, 99);
+  color: white;
+}
+.buttons .button1::before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  opacity: 0.4;
+  width: 2.5em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-animation: glare 7.3s infinite linear;
+          animation: glare 7.3s infinite linear;
+  transform: translateX(-3em) skew(-55deg);
+  transition: 0.2s;
+}
+@-webkit-keyframes glare {
+  0% {
+    transform: translateX(-3em) skew(-55deg);
+  }
+  12.7777% {
+    transform: translateX(30em) skew(-55deg);
+  }
+  100% {
+    transform: translateX(100em) skew(-55deg);
+  }
+}
+@keyframes glare {
+  0% {
+    transform: translateX(-3em) skew(-55deg);
+  }
+  12.7777% {
+    transform: translateX(30em) skew(-55deg);
+  }
+  100% {
+    transform: translateX(100em) skew(-55deg);
+  }
+}
+.buttons .button2 {
+  border: 2px solid #d4ab08;
+  background-color: white;
+  color: black;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.buttons .button2:hover {
+  color: #000 !important;
+  background-color: transparent;
+  text-shadow: none;
+  transition: 1s;
+}
+.buttons .button2:hover::before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+  transition: 0.5s;
+}
+.buttons .button2::before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+  z-index: -1;
+  content: "";
+  color: #000 !important;
+  background: #F7CA18;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.buttons .button3 {
+  background-color: orangered;
+  box-shadow: 3px 1px rgba(211, 40, 40, 0.2);
+}
+.buttons .button3:hover {
+  background-color: white;
+  color: rgb(231, 83, 107);
+  background-color: antiquewhite;
+  transition: 0.4s;
+}
+.buttons .button3:hover::after {
+  transform: translateX(100%);
+  transition: 0.2s;
+  -webkit-animation: right_to_left 1s;
+          animation: right_to_left 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.buttons .button3:hover::before {
+  transform: translateX(-100%);
+  transition: 0.2s;
+  -webkit-animation: left_to_right 1s;
+          animation: left_to_right 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.buttons .button3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(231, 83, 107);
+  top: 0;
+  left: 0;
+}
+.buttons .button3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(231, 83, 107);
+  bottom: 0;
+  left: 0;
+}
+.buttons .button3:not(:hover) {
+  transition: 0.6s;
+}
+@-webkit-keyframes left_to_right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes left_to_right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes right_to_left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes right_to_left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.buttons .button4 {
+  overflow: hidden;
+  background-color: rgb(170, 170, 243);
+  color: black;
+}
+.buttons .button4:hover {
+  background-color: white;
+  color: rgb(231, 83, 107);
+  background-color: antiquewhite;
+  transition: 0.4s;
+  box-shadow: inset 10px 10px rgba(164, 162, 162, 0.1);
+}
+.buttons .button4:hover::after {
+  transform: translateX(100%);
+  transition: 0.2s;
+  -webkit-animation: right_to_left 1s;
+          animation: right_to_left 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.buttons .button4:hover::before {
+  transform: translateX(-100%);
+  transition: 0.2s;
+  -webkit-animation: left_to_right 1s;
+          animation: left_to_right 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.buttons .button4::before {
+  content: "";
+  display: block;
+  border-left: 5px solid blue;
+  border-top: 5px solid blue;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+.buttons .button4::after {
+  content: "";
+  display: block;
+  border-right: 5px solid blue;
+  border-bottom: 5px solid blue;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+@keyframes left_to_right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes right_to_left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.button {
+  display: block;
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 20px 80px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.notifications .image {
+  z-index: 100;
+  margin-left: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.notifications .image .list .list_items {
+  display: none;
+}
+.notifications .image img {
+  width: 30px;
+  margin: 10px 0px 0px 10px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.notifications .image::before {
+  content: "4";
+  text-align: center;
+  padding: 1px;
+  color: #fff;
+  font-size: 11px;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  z-index: 100;
+  background-color: rgb(255, 51, 133);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  right: 0;
+  top: 12px;
+}
+.notifications .image::after {
+  text-align: center;
+  padding: 1px;
+  color: #fff;
+  font-size: 11px;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  z-index: 100;
+  background-color: rgb(153, 51, 255);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  right: 0;
+  top: 12px;
+}
+.notifications .image:not(:hover) {
+  transition: 1.7s;
+}
+.notifications .image:hover {
+  width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.notifications .image:hover img {
+  box-shadow: none;
+}
+.notifications .image:hover::before {
+  top: 6px;
+}
+.notifications .image:hover .img {
+  background-color: rgb(153, 51, 255);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  transition: 0.4s;
+}
+.notifications .image:hover .list {
+  background-color: white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  text-align: center;
+  transition: 0.4s;
+}
+.notifications .image:hover .list .list_items {
+  counter-reset: num;
+  display: block;
+  transition: 2.9s;
+}
+.notifications .image:hover .list .list_items li::before {
+  content: counter(num);
+  text-align: center;
+  counter-increment: num;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: rgb(153, 51, 255);
+  left: 0;
+  color: white;
+  margin-left: 20px;
+}
+.notifications .image:hover .list .list_items .list_item {
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+}
+.notifications .image:hover .list .list_items .list_item:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  background-color: rgb(153, 51, 255);
+}
+.notifications .image:hover .list .list_items .list_item:hover::before {
+  background-color: white;
+  color: rgb(153, 51, 255);
+  transform: 0.5s;
+}
+
+@media screen and (max-width: 1500px) {
+  .button {
+    width: 33%;
+    margin-top: 1%;
+  }
+}
+@media screen and (max-width: 894px) {
+  .button {
+    margin-top: 10px;
+    margin-left: 1%;
+    width: 49%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=6practPage.css.map */
