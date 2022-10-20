@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(49, 48, 48);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.transform_cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.transform_cards .card_item {
+  height: 400px;
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: darken;
+  width: 33%;
+}/*# sourceMappingURL=main_page.css.map */

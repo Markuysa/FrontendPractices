@@ -1,0 +1,20 @@
+$color: rgb(49, 48, 48);
+body{
+    background-color: $color;
+    backdrop-filter: blur(10px);
+}
+.transform_cards{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    .card_item{
+        height: 400px;
+        margin-top:40px;
+        background-color: rgb(255, 255, 255,.5);
+        background-blend-mode:darken;
+        width:33%;
+
+    }
+}
+
