@@ -34,11 +34,6 @@ body {
   margin: 10px 20px 20px 20px;
   position: relative;
 }
-.wrapper .content_meditations_list .products .product .meditation_title h2 {
-  position: absolute;
-  top: 0;
-  color: white;
-}
 .wrapper .content_meditations_list .products .product h1 {
   font-size: 36px;
   color: white;

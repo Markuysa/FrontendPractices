@@ -1,0 +1,44 @@
+.video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.video .video_res .content {
+  transform: translateX(-10px);
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 100px 0;
+  transform: translateY(-130%);
+  visibility: collapse;
+}
+.video .video_res .content h2, .video .video_res .content h3 {
+  margin-left: 80px;
+}
+.video .video_res:hover .content {
+  visibility: visible;
+  transform: translate(-10%, -140%);
+  transition: 0.5s;
+}
+
+body {
+  background-color: gray;
+}
+
+@media screen and (max-width: 850px) {
+  .video_res {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .video_res {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .video_res {
+    width: 300px;
+  }
+}/*# sourceMappingURL=videoHover.css.map */

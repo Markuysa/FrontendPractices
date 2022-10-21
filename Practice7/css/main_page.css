@@ -1,19 +1,82 @@
+@import url("/resetFile.css");
+html {
+  overflow-y: hidden;
+}
+
 body {
-  background-color: rgb(49, 48, 48);
+  background-color: rgb(31, 32, 37);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
 
-.transform_cards {
+.form_blur {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  background: rgb(31, 32, 37);
+  background-position: 0;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
 }
-.transform_cards .card_item {
-  height: 400px;
-  margin-top: 40px;
-  background-color: rgba(255, 255, 255, 0.5);
-  background-blend-mode: darken;
-  width: 33%;
+.form_blur .form_blur_content {
+  min-height: 400px;
+  min-width: 400px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+.form_blur .form_blur_content form {
+  padding: 10%;
+}
+.form_blur .form_blur_content h2 {
+  text-decoration: none;
+  border-bottom: 3px white solid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 24px;
+}
+.form_blur .form_blur_content .input_fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form_blur .form_blur_content .input_fields input {
+  margin-top: 10px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 10px;
+  width: 80%;
+}
+.form_blur .form_blur_content .input_fields input::-moz-placeholder {
+  color: rgb(197, 186, 186);
+  font-size: 14px;
+}
+.form_blur .form_blur_content .input_fields input:-ms-input-placeholder {
+  color: rgb(197, 186, 186);
+  font-size: 14px;
+}
+.form_blur .form_blur_content .input_fields input::placeholder {
+  color: rgb(197, 186, 186);
+  font-size: 14px;
+}
+.form_blur .form_blur_content .sign_btn {
+  display: block;
+  width: 70px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px;
 }/*# sourceMappingURL=main_page.css.map */

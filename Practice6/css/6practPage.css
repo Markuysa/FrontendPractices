@@ -187,16 +187,16 @@ a {
 .buttons .button4:hover::after {
   transform: translateX(100%);
   transition: 0.2s;
-  -webkit-animation: right_to_left 1s;
-          animation: right_to_left 1s;
+  -webkit-animation: right_to_left 0.5s;
+          animation: right_to_left 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 .buttons .button4:hover::before {
   transform: translateX(-100%);
   transition: 0.2s;
-  -webkit-animation: left_to_right 1s;
-          animation: left_to_right 1s;
+  -webkit-animation: left_to_right 0.5s;
+          animation: left_to_right 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -323,6 +323,8 @@ a {
 }
 .notifications .image:hover img {
   box-shadow: none;
+  background-color: transparent;
+  transition: 0.5s;
 }
 .notifications .image:hover::before {
   top: 6px;
@@ -375,10 +377,112 @@ a {
   transform: 0.5s;
 }
 
+.cards_list {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 10px;
+  list-style: none;
+}
+.cards_list li {
+  margin-top: 15px;
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 400px;
+}
+.cards_list .card1 {
+  background: url("/img/MeditaionsImage/1.jpg") center center fixed;
+  background-size: cover;
+  background-attachment: unset;
+}
+.cards_list .card2 {
+  background: url("/img/MeditaionsImage/2.jpg") center center fixed;
+  background-size: cover;
+  background-attachment: unset;
+}
+.cards_list .card3 {
+  background: url("/img/MeditaionsImage/3.jpg") center center fixed;
+  background-size: cover;
+  background-attachment: unset;
+}
+.cards_list .card4 {
+  background: url("/img/MeditaionsImage/4.jpg") center center fixed;
+  background-size: cover;
+  background-attachment: unset;
+}
+.cards_list .card {
+  position: relative;
+  overflow: hidden;
+}
+.cards_list .card .img .content {
+  transform: translateY(-100%);
+  position: absolute;
+}
+.cards_list .card .img .content h2 {
+  margin-bottom: 5px;
+  color: white;
+  font-size: 24px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.cards_list .card .img .content h3 {
+  color: white;
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.cards_list .card .img .content button {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  top: 0;
+  background-color: #fff;
+}
+.cards_list .card:hover {
+  transform: translate(-20px, -20px);
+  transition: 0.6s;
+}
+.cards_list .card:hover .content {
+  bottom: 50px;
+  transition: 0.6s;
+  margin-left: 10px;
+}
+.cards_list .card:hover::before {
+  transform: translate(0, 0);
+  transition: 0.6s;
+}
+.cards_list .card:hover .img .content {
+  transform: translate(0, 0);
+  transition: 0.6s;
+}
+.cards_list .card::before {
+  content: "";
+  width: 100%;
+  transform: translateY(-100%);
+  height: 100%;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(34, 193, 195, 0.5) 27%, rgb(160, 9, 224) 100%);
+  position: absolute;
+  top: 0;
+}
+
 @media screen and (max-width: 1500px) {
   .button {
     width: 33%;
     margin-top: 1%;
+  }
+  .cards_list li {
+    width: 33%;
   }
 }
 @media screen and (max-width: 894px) {
@@ -387,10 +491,17 @@ a {
     margin-left: 1%;
     width: 49%;
   }
+  .cards_list li {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 570px) {
   .button {
     margin-top: 10px;
     width: 100%;
+  }
+  .cards_list li {
+    width: 100%;
+    margin-left: 20px;
   }
 }/*# sourceMappingURL=6practPage.css.map */

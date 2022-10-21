@@ -1,20 +1,69 @@
-$color: rgb(49, 48, 48);
+@import url("/resetFile.css");
+$color: rgb(31, 32, 37);
+html { overflow-y: hidden; }
 body{
     background-color: $color;
     backdrop-filter: blur(10px);
+    
 }
-.transform_cards{
+.form_blur{
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    .card_item{
-        height: 400px;
-        margin-top:40px;
-        background-color: rgb(255, 255, 255,.5);
-        background-blend-mode:darken;
-        width:33%;
-
+    background: $color;
+    background-position: 0;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color:white;
+    align-items: center;
+    //backdrop-filter: blur(10px);
+    .form_blur_content{
+        min-height: 400px;
+        min-width: 400px;
+        backdrop-filter: blur(20px);
+        background: rgba(255,255,255,0.1);
+        border-radius: 5px;
+        form{
+            padding:10%;
+        }   
+        
+        h2{
+            text-decoration: none; 
+            border-bottom: 3px white solid;
+            width: fit-content;
+            font-size: 24px;
+        }
+        .input_fields{
+            display: flex;
+            
+            flex-direction: column;
+            align-items: center;
+            input{
+                margin-top:10px;
+                backdrop-filter: blur(20px);
+                background: rgba(255,255,255,0.1);
+                border-radius: 25px;
+                padding: 10px;
+                width: 80%;
+                &::placeholder{
+                    
+                    color: rgb(197, 186, 186);
+                    font-size: 14px;
+                }
+            }
+        }
+        .sign_btn{
+            display: block;
+            width:70px;
+            height: fit-content;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            border-radius:20px ;
+            margin-top:20px
+        }
     }
 }
-

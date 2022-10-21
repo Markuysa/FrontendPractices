@@ -29,13 +29,6 @@ body{
     .content_meditations_list{
         .products{
             .product {
-                .meditation_title{
-                    h2{
-                        position: absolute;
-                        top: 0;
-                        color:white;
-                    }
-                }
                 z-index:0;
                 h1{
                     font-size: 36px;
@@ -111,12 +104,10 @@ body{
                     transform: scale(1.05);
                 }
             }
-            
             .product-wrapper{
             display: block;
             float: left;
             transition: width .2s;
-
             .meditation_image{
                 position: relative;
                 padding-bottom: 100%;
