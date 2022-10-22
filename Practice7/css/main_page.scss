@@ -1,39 +1,96 @@
 @import url("/resetFile.css");
 $color: rgb(31, 32, 37);
+$form_wh: 320px;
 html { overflow-y: hidden; }
 body{
     background-color: $color;
-    backdrop-filter: blur(10px);
     
 }
-.form_blur{
+.rectangle.first{
+    width: 100px;
+    height: 100px;
+    transform: translate(160px,-160px);
+    animation: move_rectangle1 30s linear infinite;
+}
+.rectangle.second{
+    width: 40px;
+    height: 40px;
+    transform: translate(-160px,-160px);
+    animation: move_rectangle2 30s linear infinite;
+}
+.rectangle.third{
+    width: 200px;
+    height: 200px;
+    transform: translate(-160px,20px);
+    animation: move_rectangle3 30s linear infinite;
+}
+.rectangle.fourth{
+    width: 50px;
+    height: 50px;
+    transform: translate(-20px,-220px);
+    animation: move_rectangle4 30s linear infinite;
+}
+.rectangle.fifth{
+    width: 100px;
+    height: 100px;
+    transform: translate(160px,50px);
+    animation: move_rectangle5 30s linear infinite;
+}
+@keyframes move_rectangle1 {
+    0%{
+        transform: translate(160px,-160px);
+    }
+    100%{
+        transform: translate(500px,-220px);
+        transition: .8s;
+    }
+}
+.main{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: $color;
-    background-position: 0;
-    background-size: cover;
     height: 100vh;
-    display: flex;
+    background-position: 0;
     justify-content: center;
+    
+    .rectangle{
+        background:red;
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        background: rgba(255,255,255,0.05);
+    }
+
+}
+.form_blur{
+    z-index:100;
+    position:absolute;
     color:white;
-    align-items: center;
-    //backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     .form_blur_content{
-        min-height: 400px;
-        min-width: 400px;
+        min-height: 320px;
+        min-width: 320px;
         backdrop-filter: blur(20px);
-        background: rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.05);
         border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         form{
             padding:10%;
         }   
-        
+        .additional_block{
+            margin-top: 5%;
+            a{
+                color: orange;
+            }
+        }
         h2{
             text-decoration: none; 
             border-bottom: 3px white solid;
             width: fit-content;
-            font-size: 24px;
+            font-size: 20px;
+            margin-top:5px;
         }
         .input_fields{
             display: flex;
@@ -41,14 +98,14 @@ body{
             flex-direction: column;
             align-items: center;
             input{
-                margin-top:10px;
+                margin-top:20px;
                 backdrop-filter: blur(20px);
                 background: rgba(255,255,255,0.1);
                 border-radius: 25px;
                 padding: 10px;
-                width: 80%;
+                color:white;
+                width: 100%;
                 &::placeholder{
-                    
                     color: rgb(197, 186, 186);
                     font-size: 14px;
                 }
@@ -63,7 +120,8 @@ body{
             padding: 10px;
             background-color: white;
             border-radius:20px ;
-            margin-top:20px
+            margin-top:20px;
+            box-shadow: 2px 3px rgb(#000,0.1);
         }
     }
 }

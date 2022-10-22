@@ -1,0 +1,43 @@
+@import url("/resetFile.css");
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main .hover_block {
+  position: relative;
+  overflow: hidden;
+  height: 360px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #fff;
+  margin: 100px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.main .hover_block:hover {
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+.main .hover_block:hover body {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.main .hover_block .content_block {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.main .hover_block a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 7px 13px;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 10px;
+}/*# sourceMappingURL=third_cards.css.map */
