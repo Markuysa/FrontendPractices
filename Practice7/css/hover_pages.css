@@ -11,6 +11,7 @@ body {
 .main .hover_block {
   position: relative;
   overflow: hidden;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1));
   height: 360px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -39,9 +40,8 @@ body {
   transform: scale(1.1);
   transition: 0.8s;
 }
-.main .hover_block:hover body {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+.main .hover_block:hover .main {
+  filter: blur(10px);
 }
 .main .hover_block .content_block {
   margin-bottom: 30px;
@@ -81,4 +81,19 @@ body {
 .hover_block.third::before {
   content: "03";
   background: #B815E5;
+}
+
+.hover_block.first.hovered {
+  filter: blur(10px);
+  transition: 0.7s;
+}
+
+.hover_block.second.hovered {
+  filter: blur(10px);
+  transition: 0.7s;
+}
+
+.hover_block.third.hovered {
+  filter: blur(10px);
+  transition: 0.7s;
 }/*# sourceMappingURL=hover_pages.css.map */

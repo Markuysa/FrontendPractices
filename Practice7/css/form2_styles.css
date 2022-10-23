@@ -10,7 +10,7 @@ body {
 .rectangle.first {
   width: 100px;
   height: 100px;
-  transform: translate(-70px, -160px);
+  transform: translate(210px, 180px);
   background: #fff;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
@@ -19,7 +19,7 @@ body {
 .rectangle.second {
   width: 40px;
   height: 40px;
-  transform: translate(-160px, -160px);
+  transform: translate(160px, -160px);
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-duration: 12s;
@@ -27,9 +27,9 @@ body {
 }
 
 .rectangle.third {
-  width: 100px;
-  height: 100px;
-  transform: translate(-200px, 20px);
+  width: 120px;
+  height: 120px;
+  transform: translate(-180px, 20px);
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
@@ -48,36 +48,13 @@ body {
   width: 100px;
   height: 100px;
   transform: translate(160px, 60px);
+  display: block;
 }
 
 .rectangle.sixth {
-  width: 200px;
-  height: 200px;
-  transform: translate(20px, -420px);
-}
-
-.rectangle.seventh {
-  width: 140px;
-  height: 130px;
-  transform: translate(-600px, 10px);
-}
-
-.rectangle.eigth {
-  width: 100px;
-  height: 100px;
-  transform: translate(160px, -160px);
-}
-
-.rectangle.nineth {
-  width: 100px;
-  height: 100px;
-  transform: translate(0, 60px);
-}
-
-.rectangle.tenth {
-  width: 100px;
-  height: 100px;
-  transform: translate(160px, 0);
+  width: 50px;
+  height: 50px;
+  transform: translate(-120px, 80px);
 }
 
 .rectangles {
@@ -85,36 +62,20 @@ body {
 }
 
 @-webkit-keyframes move_rectangle {
-  50% {
-    transform: translate(-920px, 0) rotate(180deg);
+  0%, 100% {
+    transform: translateY(-40px);
   }
-  100% {
-    transform: translate(-720px, calc(20% - 320px)) rotate(-180deg);
+  50% {
+    transform: translateY(40px);
   }
 }
 
 @keyframes move_rectangle {
+  0%, 100% {
+    transform: translateY(-40px);
+  }
   50% {
-    transform: translate(-920px, 0) rotate(180deg);
-  }
-  100% {
-    transform: translate(-720px, calc(20% - 320px)) rotate(-180deg);
-  }
-}
-@-webkit-keyframes move_rectangle2 {
-  50% {
-    transform: translate(820px, calc(100% - 320px)) rotate(-90deg);
-  }
-  100% {
-    transform: translate(100%, calc(100% - 320px)) rotate(90deg);
-  }
-}
-@keyframes move_rectangle2 {
-  50% {
-    transform: translate(820px, calc(100% - 320px)) rotate(-90deg);
-  }
-  100% {
-    transform: translate(100%, calc(100% - 320px)) rotate(90deg);
+    transform: translateY(40px);
   }
 }
 .main {
@@ -126,13 +87,9 @@ body {
   background-position: 0;
   justify-content: center;
 }
-.main .rectangles li:nth-child(2n) {
-  -webkit-animation: move_rectangle 50s linear infinite;
-          animation: move_rectangle 50s linear infinite;
-}
-.main .rectangles li:nth-child(odd) {
-  -webkit-animation: move_rectangle2 50s linear infinite;
-          animation: move_rectangle2 50s linear infinite;
+.main .rectangles {
+  -webkit-animation: move_rectangle 10s linear infinite;
+          animation: move_rectangle 10s linear infinite;
 }
 .main .rectangle {
   list-style: none;
@@ -143,7 +100,7 @@ body {
 }
 
 .form_blur {
-  z-index: 100;
+  z-index: 0;
   position: absolute;
   color: white;
   -webkit-backdrop-filter: blur(10px);
@@ -219,4 +176,60 @@ body {
   border-radius: 20px;
   margin-top: 20px;
   box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
-}/*# sourceMappingURL=main_page.css.map */
+}
+
+@media screen and (max-width: 477px) {
+  .rectangle.first {
+    width: 80px;
+    height: 80px;
+    transition: 0.7s;
+  }
+  .rectangle.third {
+    width: 80px;
+    height: 80px;
+    transition: 0.7s;
+  }
+  .rectangle.fifth {
+    width: 70px;
+    height: 70px;
+    transition: 0.7s;
+  }
+}
+@media screen and (max-width: 390px) {
+  .rectangle.first {
+    width: 50px;
+    height: 50px;
+    transition: 0.7s;
+    margin-right: 100px;
+  }
+  .rectangle.third {
+    width: 50px;
+    height: 50px;
+    transition: 0.7s;
+    margin-left: 70px;
+  }
+  .rectangle.fifth {
+    width: 40px;
+    height: 40px;
+    transition: 0.7s;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .rectangle.first {
+    transition: 0.7s;
+    margin-right: 100px;
+  }
+  .rectangle.third {
+    transition: 0.7s;
+    margin-left: 70px;
+  }
+  .rectangle.fifth {
+    transition: 0.7s;
+    margin-right: 100px;
+  }
+  .rectangle.fourth {
+    transition: 0.7s;
+    margin-left: 100px;
+  }
+}/*# sourceMappingURL=form2_styles.css.map */

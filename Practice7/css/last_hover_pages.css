@@ -1,0 +1,185 @@
+@import url("/resetFile.css");
+body {
+  background: rgb(31, 32, 37);
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.header {
+  width: 100%;
+  background: rgb(34, 36, 46);
+  height: 100px;
+  position: relative;
+  top: 0;
+}
+.header .header_items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .header_items li {
+  position: relative;
+  margin-top: 60%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: rgb(50, 52, 63);
+  box-shadow: 5px 5px black;
+  overflow: hidden;
+}
+.header .header_items li img {
+  position: absolute;
+}
+.header .header_items li::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(43deg, #ffb10a, #e92b51, #b815e5);
+}
+.header .header_items li:hover::before {
+  transform: translateY(100%);
+  transition: 1s;
+}
+
+.main {
+  margin-top: 100px;
+}
+.main .cards {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  position: relative;
+}
+.main .cards .card .text_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  background: rgba(122, 124, 130, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: block;
+  color: white;
+  position: relative;
+  padding: 30px;
+  border-radius: 5px;
+}
+.main .cards .card .text_content:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.main .cards .card .text_content h2 {
+  font-size: 32px;
+}
+.main .cards .card .text_content a {
+  padding: 10px;
+  background: white;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+}
+.main .cards .card .background_line {
+  filter: drop-shadow(0 1px 10px rgba(142, 141, 141, 0.4));
+  position: relative;
+  height: 400px;
+  border-radius: 8px;
+  transform: translate(50%, -75%) skewX(15deg);
+  width: 50%;
+  z-index: -1;
+}
+.main .cards .card .background_line::before, .main .cards .card .background_line::after {
+  content: "";
+  visibility: collapse;
+  width: 100px;
+  height: 100px;
+  background: rgba(64, 65, 65, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  border-radius: 8px;
+  z-index: 1000000000000;
+}
+.main .cards .card .background_line::before {
+  transform: translate(0, -100%);
+}
+.main .cards .card .background_line::after {
+  transform: translate(100%, 500%);
+}
+@-webkit-keyframes first_rectangle {
+  from {
+    transform: translate(0, -100%);
+  }
+  to {
+    transform: translate(-10%, 15%);
+    transition: 0.8s;
+  }
+}
+@keyframes first_rectangle {
+  from {
+    transform: translate(0, -100%);
+  }
+  to {
+    transform: translate(-10%, 15%);
+    transition: 0.8s;
+  }
+}
+@-webkit-keyframes second_rectangle {
+  from {
+    transform: translate(100%, 500%);
+  }
+  to {
+    transform: translate(140%, 310%);
+    transition: 0.8s;
+  }
+}
+@keyframes second_rectangle {
+  from {
+    transform: translate(100%, 500%);
+  }
+  to {
+    transform: translate(140%, 310%);
+    transition: 0.8s;
+  }
+}
+.main .cards .card:hover .background_line {
+  transform: translate(50%, -75%) skewX(0deg);
+  transition: 0.6s;
+}
+.main .cards .card:hover .background_line::before {
+  -webkit-animation: first_rectangle 0.6s forwards linear;
+          animation: first_rectangle 0.6s forwards linear;
+  visibility: visible;
+  transition: 1.2s;
+}
+.main .cards .card:hover .background_line::after {
+  -webkit-animation: second_rectangle 0.6s forwards linear;
+          animation: second_rectangle 0.6s forwards linear;
+  visibility: visible;
+  transition: 1.2s;
+}
+
+.background_line.second { /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(0deg, #e907b8, #9953ee, #2241dd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.background_line.first { /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(148deg, #ff4000, #ffea00, #ff8800); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.background_line.third { /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(148deg, #1fff6d, #00ff91, #00ff2a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}/*# sourceMappingURL=last_hover_pages.css.map */

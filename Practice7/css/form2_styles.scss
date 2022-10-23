@@ -16,7 +16,7 @@ body{
 .rectangle.first{
     width: 100px;
     height: 100px;
-    transform: translate(calc(($position_second - 90px) * (-1)),calc($position_second * (-1)));
+    transform: translate($position_second + 50px,$position_second + 20px);
     background: #fff;
     animation-delay: 0s;
     
@@ -24,24 +24,22 @@ body{
 .rectangle.second{
     width: 40px;
     height: 40px;
-    transform: translate(calc($position_second * (-1)),calc($position_second * (-1)));
+    transform: translate($position_second,calc($position_second * (-1)));
     animation-delay: 2s;
     animation-duration: 12s;
     
 }
 .rectangle.third{
-    width: 100px;
-    height: 100px;
-    transform: translate(calc($position_third * (-10)),20px);
+    width: 120px;
+    height: 120px;
+    transform: translate(calc($position_third * (-9)),20px);
     animation-delay: 4s;
-    
     
 }
 .rectangle.fourth{
     width: 50px;
     height: 50px;
     transform: translate(calc($position_fourth + 100px),$position_fourth);
-
     animation-delay: 0s;
     animation-duration: 18s;
 
@@ -50,36 +48,12 @@ body{
     width: 100px;
     height: 100px;
     transform: translate($position_fifth,calc($position_fifth - 100px));
-    
+    display: block;
 }
 .rectangle.sixth{
-    width: 200px;
-    height: 200px;
-    transform: translate(calc((-1)*$position_fourth - 200px),$position_fourth - 200px);
-    
-}
-.rectangle.seventh{
-    width: 140px;
-    height: 130px;
-    transform: translate(calc($position_third * (-30)),10px);
-    
-}
-.rectangle.eigth{
-    width: 100px;
-    height: 100px;
-    transform: translate($position_second,calc($position_second * (-1)));
-    
-}
-.rectangle.nineth{
-    width: 100px;
-    height: 100px;
-    transform: translate(0,calc($position_fifth - 100px));
-    
-}
-.rectangle.tenth{
-    width: 100px;
-    height: 100px;
-    transform: translate($position_fifth,0);
+    width: 50px;
+    height: 50px;
+    transform: translate(calc($position_fourth + 100px),calc($position_fourth + 300px));
     
 }
 
@@ -88,22 +62,11 @@ body{
 }
 @keyframes move_rectangle {
 
+    0%,100%{
+        transform: translateY(-40px);
+    }
     50%{
-        transform: translate(calc(((-1)*($form_wh + 600px))),0) rotate(180deg);
-    }
-    100%{
-        transform: translate(calc((-1) * ($form_wh + 400px)),calc(20% - $form_wh)) rotate(-180deg);
-    }
-
-}
-@keyframes move_rectangle2 {
-
-    50%{
-        transform: translate(calc((($form_wh + 500px))),calc(100% - $form_wh)) rotate(-90deg);
-    }
-    100%{
-        //transform: translate(calc(10vh - $form_wh),calc(30% - $form_wh)) rotate(180deg);
-        transform: translate(100%,calc(100% - $form_wh)) rotate(90deg);
+        transform: translateY(40px) ;
     }
 
 }
@@ -116,12 +79,7 @@ body{
     background-position: 0;
     justify-content: center;
     .rectangles{
-        li:nth-child(2n){
-            animation: move_rectangle 50s linear infinite;
-        }
-        li:nth-child(odd){
-            animation: move_rectangle2 50s linear infinite;
-        }
+        animation: move_rectangle 10s linear infinite;
     }
     .rectangle{
         list-style: none;
@@ -132,7 +90,7 @@ body{
 
 }
 .form_blur{
-    z-index:100;
+    z-index:0;
     position:absolute;
     color:white;
     backdrop-filter: blur(10px);
@@ -193,5 +151,80 @@ body{
             margin-top:20px;
             box-shadow: 2px 3px rgb(#000,0.1);
         }
+    }
+}
+
+
+@media screen and (max-width:"477px") {
+    .rectangle.first{
+        width: 80px;
+        height:80px;
+        transition: 0.7s;
+
+    }
+    .rectangle.third{
+        width: 80px;
+        height:80px;
+        transition: 0.7s;
+
+    }
+    .rectangle.fifth{
+        width: 70px;
+        height:70px;
+        transition: 0.7s;
+
+    }
+}
+@media screen and (max-width:"390px") {
+    .rectangle.first{
+        width: 50px;
+        height:50px;
+        transition: 0.7s;
+        margin-right: 100px;
+
+    }
+    .rectangle.third{
+        width: 50px;
+        height:50px;
+        transition: 0.7s;
+        
+        margin-left: 70px;
+
+    }
+    .rectangle.fifth{
+        width: 40px;
+        height:40px;
+        transition: 0.7s;
+        
+        margin-right: 100px;
+
+    }
+}
+@media screen and (max-width:"330px") {
+    .rectangle.first{
+        transition: 0.7s;
+        margin-right: 100px;
+
+    }
+    .rectangle.third{
+
+        transition: 0.7s;
+        
+        margin-left: 70px;
+
+    }
+    .rectangle.fifth{
+
+        transition: 0.7s;
+        
+        margin-right: 100px;
+
+    }
+    .rectangle.fourth{
+
+        transition: 0.7s;
+        
+        margin-left: 100px;
+
     }
 }

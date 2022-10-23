@@ -31,5 +31,56 @@
 
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        let divv = document.querySelectorAll(".hover_block")
+         $('.hover_block').hover(
+            function(){
+                if ($(this).hasClass('first')){
+                    divv[1].classList.add('hovered')
+                    divv[2].classList.add('hovered')
+
+                }
+                else{
+                    if($(this).hasClass('second')){
+                        divv[0].classList.add('hovered')
+                        divv[2].classList.add('hovered')
+
+                    }
+                    else{
+                        divv[0].classList.add('hovered')
+                        divv[1].classList.add('hovered')
+
+                    }
+                }
+            },
+            function(){
+                if ($(this).hasClass('first')){
+                    divv[1].classList.remove("hovered");
+                    divv[2].classList.remove("hovered");
+
+                }
+                else{
+                    if($(this).hasClass('second')){
+                        divv[0].classList.remove("hovered");
+                        divv[2].classList.remove("hovered");
+
+                    }
+                    else{
+                        divv[0].classList.remove("hovered");
+                        divv[1].classList.remove("hovered");
+
+                    }
+                }
+            });
+
+
+            window.isHovering = function (selector) {
+                return $(selector).data('hover')?true:false; //check element for hover property
+            }
+            
+
+
+    </script>
 </body>
 </html>
