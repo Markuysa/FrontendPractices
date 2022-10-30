@@ -1,0 +1,37 @@
+@import url("/css/resetFile.css");
+
+body{
+
+    background-color: rgb(20, 20, 48);
+}
+.wrapper{
+    .header{
+        color:white;
+        font-size: 36px;    
+    }
+    .form_content{
+        display: grid;
+        justify-items: stretch;
+        // grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3,150px);
+        input{
+            height: 20%;
+            &::placeholder{
+                color:white;
+            }
+            &:focus{
+                background-color: rgb(26, 126, 232);
+                transition: 0.8s;
+                &::placeholder{
+                    transform: translateY(-100%);
+                    transition: 0.8s;
+                }
+            }
+            border-bottom: 2px solid aqua;
+            background-color: black;
+            padding: 10px;
+            border-radius: 2px;
+        }
+    }
+
+}

@@ -15,6 +15,8 @@ $grid-back-color: rgb(13, 9, 66);
         grid-template-rows: repeat(3,200px);
         gap:8px;
         .content{
+            background-size: cover;
+            background-attachment: unset;
             position: relative;
             display: flex;
             align-items: center;
@@ -59,16 +61,30 @@ $grid-back-color: rgb(13, 9, 66);
 }
 .content.html{
     grid-row: span 2;
+    background: url("/img/secondPage/html.jpeg") center center fixed;
+    
+}
+.content.css{
+    background: url("/img/secondPage/css.gif") center center fixed;
 }
 .content.js{
     grid-column:  span 2;
+    background: url("/img/secondPage/js.jfif") center center fixed;
 }
-.content.web{
-    grid-row: span 2;
+.content.nodejs{
+    background: url("/img/secondPage/nodejs.jpg") center center fixed;
+}
+.content.vue{
+    background: url("/img/secondPage/vue.png") center center fixed;
 }
 .content.react{
+    background: url("/img/secondPage/react.png") center center fixed;
     grid-row: span 2;
 }
 .content.angular{
+    background: url("/img/secondPage/angular.jpg") center center fixed;
     grid-column: span 2;
+}
+.content.mongo{
+    background: url("/img/secondPage/MongodbLogo.jpg") center center fixed;
 }
