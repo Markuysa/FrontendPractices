@@ -8,11 +8,10 @@ body {
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  flex-direction: row;
 }
 .main .hover_block {
-  width: 33%;
   position: relative;
-  background-position: 0 180px;
   overflow: hidden;
   height: 360px;
   width: -webkit-fit-content;
@@ -24,7 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 101230123120312040000000000000000000000000000;
+  z-index: 1231231231;
 }
 .main .hover_block::before {
   content: "";
@@ -33,7 +32,7 @@ body {
   left: 50%;
   width: 200px;
   height: 240px;
-  z-index: -123123123123123;
+  z-index: -1;
   transform-origin: top left;
 }
 .main .hover_block::after {
@@ -44,7 +43,7 @@ body {
   width: 200px;
   height: 240px;
   transform-origin: bottom right;
-  z-index: -123123123123123;
+  z-index: -1;
 }
 @-webkit-keyframes animate {
   0% {
@@ -109,4 +108,8 @@ body {
   color: black;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.hover_block.first {
+  width: 100%;
 }/*# sourceMappingURL=third_cards.css.map */

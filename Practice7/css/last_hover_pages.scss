@@ -56,7 +56,6 @@ body{
 .main{
     margin-top:100px;
     .cards{
-        width: 100%;
         height: 100vh;
         display: flex;
         align-items: center;
@@ -169,4 +168,10 @@ body{
 .background_line.third{
     background: -webkit-linear-gradient(148deg, #1fff6d,#00ff91,#00ff2a);/* Chrome 10-25, Safari 5.1-6 */   
     background: linear-gradient(148deg, #1fff6d,#00ff91,#00ff2a);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                
+}
+
+
+@media screen  and (max-width: "1237px"){
+    
+    
 }

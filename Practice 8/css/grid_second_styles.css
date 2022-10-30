@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url("/css/resetFile.css");
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(13, 9, 66);
+}
+.wrapper .grind_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 8px;
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+  grid-auto-flow: row dense;
+}
+.wrapper .grind_container .content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.wrapper .grind_container .content::before {
+  content: "Веб программирование";
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+  height: 50px;
+  position: absolute;
+  text-align: start;
+  padding: 10px;
+  bottom: 0;
+  transform: translateY(100%);
+  width: 100%;
+}
+.wrapper .grind_container .content .img {
+  width: 100%;
+}
+.wrapper .grind_container .content:hover::before {
+  transform: none;
+  transition: 0.8s;
+}
+
+.content.html {
+  grid-row: span 2;
+}
+
+.content.js {
+  grid-column: span 2;
+}
+
+.content.web {
+  grid-row: span 2;
+}
+
+.content.react {
+  grid-row: span 2;
+}
+
+.content.angular {
+  grid-column: span 2;
+}/*# sourceMappingURL=grid_second_styles.css.map */

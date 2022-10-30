@@ -1,0 +1,51 @@
+@import url("/css/resetFile.css");
+
+$grid-item-color:rgb(48, 48, 51);
+$grid-back-color: rgb(13, 9, 66);
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: $grid-back-color;
+    .grind_container{
+        display: grid;
+        // grid-template-areas: 
+        // "computer globe settings"
+        // "";
+        grid-template-columns:  repeat(4,1fr);
+        grid-template-rows: repeat(3,200px);
+        gap:8px;
+        .content{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            background-color: $grid-item-color;
+            width: 100%;
+            height: 100%;
+            color:white;
+            text-align: center;
+
+            &:hover{
+                transition: 0.3s;
+                background-color: rgb(225, 15, 113);
+            }
+        }
+        grid-auto-rows: 100px;
+        grid-auto-columns: 100px;
+        grid-auto-flow: row dense;
+    }
+
+}
+.content.computer{
+    grid-column: span 2;
+}
+.content.globe{
+    grid-row: span 2;
+}
+.content.web{
+    grid-row: span 2;
+}
+.content.certificate{
+    grid-column: span 3;
+}
