@@ -7,6 +7,7 @@
     grid-auto-flow: row;
     height: 100vh;
     grid-template-areas:
+
     "header"
     "main"
     "aside"
@@ -17,11 +18,17 @@
         border: 5px solid red;
         border-radius: 5px;
         margin:10px;
+        box-shadow: 2px 2px black;
+        font-size: 24px;  
+        padding: 10px;
+        text-transform: uppercase;
+        font-family:'Courier New', Courier, monospace;
     }
     header{
         grid-area: header;
         grid-column: span 5;
         height: fit-content;
+        margin-top:40px;
     }
     main{
         grid-area: main;
@@ -35,7 +42,6 @@
     }
     aside.ads{
         grid-area: ads;
-        grid-area: aside;
         grid-column: 5/6;
         grid-row: 2/9;
     }
@@ -43,6 +49,7 @@
         grid-area: footer;
         grid-row: 9/10;
         grid-column: span 5;
+        height: fit-content;
     }
     nav{
         grid-area: navigation;
@@ -51,6 +58,50 @@
     }
 }
 
-@media screen and (orientation: "") {
+@media screen and (max-width:"820px") {
+    .wrapper{
+        transition: 0.6s;
+        nav{
+            grid-column: 1 / 6;
+            transition: .6s;
+        }
+        aside.aside{
+            grid-area: aside;
+            grid-row: 3/9;
+        }
+        main{
+            grid-column: 2 / 6;
+            grid-row: 3/9;
+        }
+        aside.ads{
+            grid-column: 1/2;
+            grid-row: 9/10;
+            height: fit-content;
+        }
+    }
+    
+}
+@media screen and (max-width:"480px") {
+    .wrapper{
+        transition: 0.6s;
+        nav{
+            grid-column: 1 / 6;
+            transition: .6s;
+        }
+        aside.aside{
+            grid-area: aside;
+            grid-row: 7/8;
+            grid-column: span 5;
+        }
+        main{
+            grid-column: 1 / 6;
+            grid-row: 3/7;
+        }
+        aside.ads{
+            grid-row: 8/9;
+            height: auto;
+            grid-column: span 5;
+        }
+    }
     
 }

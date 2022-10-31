@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import url("/css/resetFile.css");
+.wrapper .copyright {
+  grid-column: span 4;
+  text-align: center;
+  background-color: rgb(15, 32, 107);
+  padding: 10px;
+  margin: 0px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer {
+  padding: 50px;
+  gap: 50px;
+  background-color: rgb(21, 53, 196);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template: 1fr/2fr repeat(3, 1fr);
+}
+.footer .contact-us ul li {
+  list-style-image: url("/img/task4/icons8-положить-трубку-24.png");
+}
+.footer .contact-us ul li:first-child {
+  list-style-image: url("/img/task4/icons8-маркер-места-24.png");
+}
+.footer a {
+  color: white;
+}
+.footer div {
+  margin-left: 20px;
+}
+.footer section {
+  font-size: 16px;
+}
+.footer h2 {
+  position: relative;
+  font-size: 32px;
+}
+.footer h2::before {
+  content: "";
+  height: 3px;
+  background-color: rgb(220, 219, 192);
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+}
+.footer li {
+  padding: 8px;
+}
+.footer .images {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  left: 0;
+  transform: translateX(-7%);
+}
+.footer .images img {
+  margin-left: 10px;
+  background-color: rgb(11, 17, 42);
+  border-radius: 5px;
+  padding: 10px;
+}
+.footer .images img:hover {
+  background-color: rgb(6, 52, 235);
+  transition: 0.6s;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer div {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    overflow: scroll;
+    height: 100vh;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=footer.css.map */
