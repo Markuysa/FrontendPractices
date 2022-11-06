@@ -1,0 +1,126 @@
+
+body{
+    font-family:'Courier New', Courier, monospace;
+    background-color: cadetblue;
+}
+
+.task_buttons{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+}
+.firstTask, .secondTask{
+    padding: 10px;
+    background-color:rgb(193, 43, 148);
+    color:white;
+    font-family:'Courier New', Courier, monospace;
+    margin:20px;
+}
+.firstTask:hover, .secondTask:hover{
+    background-color: rgb(112, 177, 88);
+    transition: .4s;
+    border-radius: 8px;
+}
+.post{  
+    margin: 0 auto;
+    height: 500px;
+    width: 300px;
+    /* background-color:rgb(190, 201, 73); */
+    background: rgba(54, 54, 54, 0.4);
+    backdrop-filter: blur(10px);
+    border: 4px solid rgb(190, 201, 73);
+}
+.post__title{
+    padding: 5px;
+    background-color:rgb(190, 201, 73);
+    position: absolute;
+    bottom: 0;
+}
+ a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.post__image{
+    height: 80%;
+    background: url("/img/floer2.jpg") no-repeat center center;
+    
+    background-size: 100% auto;
+    background-position: 0;
+    
+
+}
+.icon{
+    background-image: url('/img/arrowLeft.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right:35px;
+}
+.heart{
+    background-image: url('/img/icons8-червы-18.png')  no-repeat center center;
+    background-position: right center;
+    background-repeat: no-repeat;
+    margin-left:5px;
+    padding: 5px;
+}
+.like_button{
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(117, 240, 221);
+    position: absolute;
+    top: 0;
+    right:0;
+    transform: translate(20px, -10px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top:5%;
+}
+.content p{
+    transform: translateX(2px);
+}
+
+.active{
+    
+    background-position: right center;
+    background-repeat: no-repeat;
+    margin-left:5px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: red;
+    transition: 1s;
+    animation: heartbeat 1.3s;
+    
+}
+@keyframes heartbeat {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    60%{
+        transform: scale(1.2);
+    }
+    70%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+#follower{
+    position : absolute;
+    background-color : red;
+    color : white;
+    padding : 10px;
+  }
