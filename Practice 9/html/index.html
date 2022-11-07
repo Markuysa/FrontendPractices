@@ -28,27 +28,8 @@
                         </div>
                     </div>
             </div>
-            <div id="follower">Move your mouse</div>
+            
         </div>
         <script src="/js/main_script.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
-                
-                var mouseX = 0, mouseY = 0;
-                $(document).mousemove(function(e){
-                mouseX = e.pageX;
-                mouseY = e.pageY; 
-                });
-
-                // cache the selector
-                var follower = $("#follower");
-                var xp = 0, yp = 0;
-                var loop = setInterval(function(){
-                    // change 12 to alter damping, higher is slower
-                    xp += (mouseX - xp) / 12;
-                    yp += (mouseY - yp) / 12;
-                    follower.css({left:xp, top:yp});
-
-                }, 30);
-        </script>
     </body>
     </html>

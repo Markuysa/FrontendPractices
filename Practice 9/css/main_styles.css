@@ -97,7 +97,7 @@ body{
     padding: 5px;
     border-radius: 50%;
     background-color: red;
-    transition: 1s;
+    transition: 2s;
     animation: heartbeat 1.3s;
     
 }
