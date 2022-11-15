@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>captcha</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    
+
+    <div class="wrapper">
+        <div class="accumulator">
+            <input type="text" class="accDataInput">
+            <div>
+                <input type="button" class="createAcc" value="setValue">
+                <input type="button" class="increaseAcc" value="addValue">
+            </div>
+            <p class="accData">0</p>
+        </div>
+        <div class="backetIcon">
+        </div>
+        <div class="users">
+            <ul class="usersList">
+                <p class = "closeButtonBacket">X</p>
+                <li class="usersList__user">asasdddddddddddas</li>
+            </ul>
+        </div>
+        <form method="post" class="mainForm">
+
+            <input type="text" class="formInputLogin" placeholder="Login">
+            <input type="email" class="formInputEmail" placeholder="Email">
+            <input type="password" class="formInputPassword" placeholder="Password">
+
+            <button class="showCaptcha" >Show captcha</button>
+            
+            <button class="sendFormButton" disabled>Submit</button>
+        </form>
+        <div class="captchaWrapper">
+
+            <div class="captcha">
+                <p class="closeButton">X</p>
+                <div class="captcha__content">
+                    <p class="captcha__content__text">ExAmPlE</p>
+                </div>
+                <input type="text" placeholder="input captcha"class="userCaptchaInput">
+                <button class="submitCaptcha">Submit captcha</button>
+                <p class="errorMessage"></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+    <script src="/js/scripts.js"></script>
+</html>

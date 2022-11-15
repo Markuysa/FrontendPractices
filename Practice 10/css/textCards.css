@@ -1,0 +1,14 @@
+@import url("/css/reset.css");
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .textBlock {
+  width: 50%;
+  text-align: justify;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 5%;
+}

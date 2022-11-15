@@ -63,7 +63,7 @@ secondButton.addEventListener('click',secondTask);
 //------------------------------------------------------------------------------------------------------------------//
 let count=0;
 var mouseX = 0, mouseY = 0;
-
+flag = true
 const mousemove = ()=>{
     addEventListener('mousemove',(e)=>{
     var div = document.createElement("div");
