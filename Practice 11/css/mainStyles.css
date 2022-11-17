@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.wrapper .firstTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .firstTask .buttonsBlock button {
+  margin: 50px;
+}
+.wrapper .firstTask button {
+  padding: 10px;
+  width: 100px;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+.wrapper .firstTask .informationBlock {
+  background-color: aliceblue;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 40px;
+}
+.wrapper .firstTask .informationBlock .informationBlock__list {
+  width: 500px;
+}
+.wrapper .firstTask .informationBlock .informationBlock__list li {
+  transition: 1s;
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.wrapper .firstTask .informationBlock .informationBlock__list li:hover {
+  background-color: rgb(153, 51, 255);
+  transform: scale(1.1);
+  border-radius: 10px;
+  cursor: pointer;
+}

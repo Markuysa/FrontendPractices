@@ -1,0 +1,96 @@
+
+@import url("/css/resetFile.css");
+
+.notifications .image {
+    z-index: 100;
+    margin-left: 10px;
+    width:fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .notifications .image .list .list_items {
+    display: none;
+  }
+  .notifications .image img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px 0px 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .notifications .image::after {
+    text-align: center;
+    padding: 1px;
+    color: #fff;
+    font-size: 11px;
+    font-family: "Courier New", Courier, monospace;
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(153, 51, 255);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    right: 0;
+    top: 12px;
+  }
+  .notifications .image:not(:hover) {
+    transition: 1.7s;
+  }
+  .notifications .image:hover {
+    width: 200px;
+    height: fit-content;
+  }
+  .notifications .image:hover img {
+    box-shadow: none;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .img span{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: rgba(26, 210, 81, 0.792);
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+    width: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .notifications .image:hover .img {
+    background-color: rgb(153, 51, 255);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transition: 0.4s;
+  }
+  .notifications .image:hover .list {
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+    transition: 0.4s;
+  }
+  .notifications .image:hover .list .list_items {
+    counter-reset: num;
+    display: block;
+    transition: 2.9s;
+  }
+  .notifications .image:hover .list .list_items .list_item {
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+  }
+  .notifications .image:hover .list .list_items .list_item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: rgb(153, 51, 255);
+  }
+  @import url("/css/resetFile.css");
+body {
+  background-color: aqua;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

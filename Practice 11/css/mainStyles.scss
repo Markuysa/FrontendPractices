@@ -1,0 +1,48 @@
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 100vh;
+    .firstTask{
+        .buttonsBlock{
+            button{
+                margin:50px;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        button{
+            padding: 10px;   
+            width: 100px;
+            background-color: black;
+            font-family:'Courier New', Courier, monospace;
+            color: white;
+        }
+        .informationBlock{
+            background-color: aliceblue;
+            width: fit-content;
+            padding: 40px;
+            .informationBlock__list{
+                width: 500px;
+                li{
+                    transition: 1s;
+                    margin: 10px;
+                    width: 100%;
+                    padding: 10px;
+                    &:hover{
+                        background-color: rgb(153, 51, 255);
+                        transform: scale(1.1);
+                        border-radius: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

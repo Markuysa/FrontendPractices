@@ -167,7 +167,7 @@ const checkSumbit= ()=>{
         password.value = ""
         counter+=1
     }
-}
+}zz
 
 sumbitFormButton.addEventListener('click',checkSumbit)
 
