@@ -42,8 +42,7 @@ function renderList(){
     ulList.innerHTML = ''
     for (let i =0;i<meditations.length;i++){
         ulList.appendChild(createLI(meditations[i]))
-    }
-    
+    } 
 }
 renderList()
 

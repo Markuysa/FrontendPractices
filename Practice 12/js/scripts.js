@@ -128,13 +128,14 @@ setRandomCaptcha(getRandomTextCaptcha())
 
 let user = {}
 const isEmpty = (user)=>{
-    alert(user)
     if (user.login==undefined && user.password=="" && user.email=="")
         return false;
     return true;
 }
 
 let createElement = (index)=>{
+    let close = document.createElement('div')
+    close.className = "closeLI"
     let liElem = document.createElement("li")
     liElem.className = "usersList__user"
     liElem.textContent = usersList[index].login
@@ -155,7 +156,6 @@ const checkSumbit= ()=>{
     user.login = login.value
     user.password = password.value
     user.email = email.value
-    alert(user)
     if (!isEmpty(user)){
         alert("INPUT THE INFORMATION!!!!!")
     }
@@ -216,6 +216,10 @@ const openBacket = ()=>{
 
     usersModal.style.visibility = "visible"
     usersModal.style.opacity = "1"
+
+
+    
+
 }
 
 
@@ -231,4 +235,108 @@ const closeBacket = ()=>{
 }
 
 closeBacketButton.addEventListener('click',closeBacket)
+
+
+
+let notification = document.querySelector(".notification")
+
+setTimeout(()=>{
+    notification.style.visibility = "hidden"
+    notification.style.opacity = "0"
+},1500)
+
+
+let imageBlock = document.querySelector(".imageBlock__content")
+
+
+flag = true
+
+imageBlock.addEventListener('click',(e)=>{
+    e.preventDefault()
+    mouseX = e.pageX;
+    mouseY = e.pageY; 
+    alert(mouseX+" "+mouseY)
+})
+imageBlock.style.display = "flex"
+imageBlock.style.flexDirection = "column"
+imageBlock.style.justifyContent = "center"
+imageBlock.style.alignItems = "center"
+
+
+
+let link = document.querySelector('.link')
+
+
+link.style.color ="red"
+
+
+
+
+
+let meditations= [
+    {id:1,title: "Get alone with nature - hear the sounds of real wildlife to feel true happiness",rating: 4.1},
+    {id:2,title: "Discover true peace and tranquility with meditation to the sounds of the famous Tibetan meditation instrument",rating: 4.4},
+    {id:3,title: "Meditations for sleep - calm your soul and let in the cosmic force",rating: 4.0},
+    {id:4,title: "Get to know the true essence of existence on the planet, immerse yourself in your own universe - in your mind",rating: 5.0},
+    {id:5,title: "Realize the power of your subconscious - see your power",rating: 3.1},
+    {id:6,title: "Feel how all the problems dissipate and only common sense and self-knowledge appear",rating: 4.2},
+    {id:7,title: "See the real world without earthly problems and adversities immerse yourself in the astral",rating: 4.5}
+]
+let interval
+function startNotifications(){
+    interval = setInterval(()=>{
+
+        let counterNotifications = document.querySelector(".counter")
+        let value = Number(counterNotifications.textContent)
+        counterNotifications.textContent = value+1
+    },3000)
+}
+
+function delay(func, ms) {
+    clearInterval(interval)
+    return function() {
+      setTimeout(func, ms);
+    };
+}
+
+let notificationsButon = document.querySelector(".bell")
+notificationsButon.addEventListener('mouseover',()=>{
+
+    delay(startNotifications, 10000)();
+})
+startNotifications()
+
+function createLI(object){
+    let liElem = document.createElement('li')
+    liElem.className = "informationBlock__list__item"
+    liElem.textContent = object.id + object.title + object.rating
+    return liElem
+}
+
+let replaceButton = document.querySelector('.replace')
+let deleteButton = document.querySelector('.delete')
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function deleteLi(target){
+    let close = target.querySelector('span')
+    close.addEventListener('click',()=>{
+
+        target.style.display="none"
+    })
+}
+let listNotifications = document.querySelector(".list_items")
+
+listNotifications.addEventListener('click',(event)=>{
+
+    let target = event.target.closest("li")
+    if (!target) return;
+
+    if (!listNotifications.contains(target)) return
+    deleteLi(target);
+
+})
+
+
 
