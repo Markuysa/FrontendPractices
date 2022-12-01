@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.linksWrapper {
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linksWrapper .contents {
+  margin: 0 auto;
+  width: 500px;
+}
+.linksWrapper .contents .linkItem {
+  width: 90%;
+  background: rgba(219, 216, 37, 0.719);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.linksWrapper .contents .linkItem a {
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+.fileManager {
+  width: 100%;
+  height: 100vh;
+  background-color: antiquewhite;
+  position: absolute;
+}
+.fileManager .fileManager_files {
+  display: block;
+  margin-top: 20px;
+}
+.fileManager .fileManager_files li {
+  list-style: none;
+  margin: 10px;
+  padding: 5px;
+}
+.fileManager .fileManager_files .block {
+  display: flex;
+  align-items: center;
+}
+.fileManager .fileManager_files .block img + .block-text {
+  margin-left: 0.5em;
+}
+.fileManager .fileManager_files .block .block-text + img {
+  margin-left: 0.5em;
+}
+
+.selected {
+  background-color: aquamarine;
+}
