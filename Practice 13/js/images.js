@@ -23,3 +23,8 @@ bottomImages.addEventListener('click',(event)=>{
 
     changeImages(target)
 })
+
+
+
+
+

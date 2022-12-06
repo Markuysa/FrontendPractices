@@ -445,3 +445,15 @@ sliderRoller.onmousedown = function(event) {
 sliderRoller.ondragstart = function() {
   return false;
 };
+
+
+
+
+
+
+
+
+
+
+
+

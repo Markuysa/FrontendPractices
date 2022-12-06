@@ -99,4 +99,53 @@ ulElement.addEventListener('click',(event)=>{
 
 
 
-
+colors = ["white","blue","green","yellow","red","violet"]
+let polygon = document.querySelector(".animationPolygon")
+let startAnimationPolygon = document.querySelector(".startAnimation")
+counter = 0
+function animation(){
+    let rect = document.querySelector(".rectangle")
+    let position = 0
+    let id = setInterval(() => {
+        if (position == 271){
+            rect.style.top = "125px";
+            rect.style.left = "125px";
+            rect.style.scale = "5"
+            setInterval(()=>{
+                rect.style.backgroundColor = colors[counter]
+                rect.style.scale = counter+""
+                counter++;
+                if (counter==5){
+                    counter=0;
+                }
+                
+            },100)
+        }else{
+            position++;
+            rect.style.top = position +'px'
+            rect.style.left = position +'px'
+            
+        }
+    }, 10);
+}
+startAnimationPolygon.addEventListener('click',animation)
+counter2 = 0
+let wrapper= document.querySelector('.wrapper')
+let plygonA= document.querySelector(".animationBlock")
+let party = document.querySelector(".party")
+let body = document.querySelector("body")
+let linkss = document.querySelector(".linksWrapper")
+function animationParty(){
+    
+    linksWrapper.style.display = "none"
+    plygonA.style.display = "none"
+    setInterval(()=>{
+        linkss.style.backgroundColor = colors[counter]
+        counter++;
+        if (counter==6){
+            counter=0;
+        }
+        
+    },100)
+}
+party.addEventListener('click',animationParty)

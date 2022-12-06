@@ -60,3 +60,34 @@ body{
 
     background-color:aquamarine;
 }
+
+.animationBlock{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    .animationPolygon{
+    
+        height: 300px;
+        width: 300px;
+        background:blueviolet;
+        position: relative;
+    
+        .rectangle{
+            transition: .2s;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0,0.3);
+            backdrop-filter: blur(10px);
+    
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+    
+    }
+}
+
+.party{
+    position: absolute;
+    top:10px;
+}
